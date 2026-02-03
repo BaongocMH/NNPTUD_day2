@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Kho Hàng - Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f4f4f9; }
+        h2 { color: #333; }
+        .stats-container { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 200px; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .status-on { color: green; font-weight: bold; }
+        .status-off { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Danh Sách Sản Phẩm</h2>
+    
+    <div class="stats-container">
+        <div class="card">
+            <strong>Tổng giá trị kho:</strong> <br>
+            <span id="total-value" style="font-size: 1.2em; color: #28a745;">0</span> VND
+        </div>
+        <div class="card">
+            <strong>SP đắt nhất (>30tr):</strong> <br>
+            <span id="expensive-check">-</span>
+        </div>
+        <div class="card">
+            <strong>Accessories đang bán:</strong> <br>
+            <span id="acc-status">-</span>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá (VND)</th>
+                <th>Số lượng</th>
+                <th>Danh mục</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody id="product-table-body">
+            </tbody>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
